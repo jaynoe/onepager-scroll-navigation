@@ -26,6 +26,7 @@ Example: _Soon_
 ## JavaScript
 ```
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="jquery.onepager-scroll-navigation.js"></script>
 <script>$(".navigation").onepagerScrollNavigation();</script>
 ```
 
