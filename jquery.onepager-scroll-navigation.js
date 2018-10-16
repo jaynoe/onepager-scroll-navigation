@@ -35,11 +35,16 @@
                 scrollTop: $(hash).offset().top-offset
             }, options.duration);
         });
+        
+        // new offset if fixed header
+		var linkOffset;
+		if(offset > 0) { linkOffset = offset+10; } 
+		else { linkOffset = offset; }
 
         $(window).scroll(function() {
-            var pos = $(window).scrollTop();
+            var pos = $(window).scrollTop()+linkOffset;
             $(options.containerClass).each(function() {
-                var section = $(this).offset().top-offset;
+                var section = $(this).offset().top;
                 var id = $(this).attr("id");
                 if(pos >= section) {
                     $navigation.find("a[data-area]").removeClass(options.activeClass);
